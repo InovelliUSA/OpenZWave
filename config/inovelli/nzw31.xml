@@ -13,7 +13,7 @@
       <Item value="0" label="LED on when switch is off"/>
       <Item value="1" label="LED on when switch is on"/>
       <Item value="2" label="LED is disabled"/>
-	  <Item value="3" label="Always on"/>
+	  <Item value="3" label="LED is always on"/>
     </Value>
     <Value genre="config" index="4" value="0" label="Orientation" units="" size="1" min="0" max="255" type="list">
       <Help>Controls the on/off orientation of the rocker switch</Help>
