@@ -22,7 +22,7 @@
   <CommandClass id="133">
     <Associations num_groups="2">
       <Group index="1" label="Lifeline" max_associations="5" />
-            <Group index="2" label="Basic_Set" max_associations="5" />
+	    <Group index="2" label="Basic_Set" max_associations="5" />
     </Associations>
   </CommandClass>
 <!-- Central Scene Reports -->
