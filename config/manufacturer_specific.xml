@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ManufacturerSpecificData Revision="51" xmlns="https://github.com/OpenZWave/open-zwave">
+<ManufacturerSpecificData Revision="52" xmlns="https://github.com/OpenZWave/open-zwave">
   <Manufacturer id="0028" name="2B Electronics"></Manufacturer>
   <Manufacturer id="0098" name="2GIG Technologies">
     <Product config="2gig/ct50e.xml" id="015e" name="CT50e Thermostat" type="3200"/>
@@ -966,6 +966,8 @@
   <Manufacturer id="031E" name="Inovelli">
     <Product type="0002" id="0001" name="LZW30-SN Switch Red Series" config="inovelli/lzw30-sn.xml"/>
     <Product type="0004" id="0001" name="LZW30 Switch" config="inovelli/lzw30.xml"/>
+    <Product type="0001" id="0001" name="LZW31-SN Dimmer Red Series" config="inovelli/lzw31-sn.xml"/>
+    <Product type="0003" id="0001" name="LZW31 Dimmer" config="inovelli/lzw31.xml"/>
   </Manufacturer>
   <Manufacturer id="0100" name="Insignia"></Manufacturer>
   <Manufacturer id="0006" name="Intel"></Manufacturer>
