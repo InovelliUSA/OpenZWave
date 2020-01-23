@@ -29,14 +29,14 @@
       <Item value="1" label="On"/>
       <Item value="2" label="Off"/>
     </Value>
-    <Value genre="config" type="short" size="2" index="51" label="Color Adjustment (Warm White)" min="1387" max="4999" value="2700">
+    <Value genre="config" type="short" size="2" index="81" label="Color Adjustment (Warm White)" min="1387" max="4999" value="2700">
       <Help>
       Changes the Kelvin from 2700k (1387) to 4999k (4999)
       Range: 1387-4999
       Default: 2700
       </Help>
     </Value>
-    <Value genre="config" type="short" size="2" index="52" label="Color Adjustment (Cool White)" min="5000" max="6500" value="6500">
+    <Value genre="config" type="short" size="2" index="82" label="Color Adjustment (Cool White)" min="5000" max="6500" value="6500">
       <Help>
       Changes the Kelvin from 5000k (5000) to 6500k (6500)
       Range: 5000-6500
