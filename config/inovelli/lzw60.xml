@@ -18,7 +18,6 @@
     </ChangeLog>
   </MetaData>
   <!-- Configuration Parameters -->
-
   <CommandClass id="112">
     <Value genre="config" type="byte" size="1" index="10" label="Low Battery Power Level Alarm" min="10" max="50" value="10">
       <Help>
@@ -34,7 +33,7 @@
       Default: 8
       </Help>
     </Value>
-    <Value genre="config" type="byte" size="1" index="13" label="PIR Trigger Time (seconds)" min="5" max="15300" value="30">
+    <Value genre="config" type="short" size="2" index="13" label="PIR Trigger Time (seconds)" min="5" max="15300" value="30">
       <Help>
       The amount of seconds between motion detection (ie: the interval)
 	  Range:5-15300
@@ -57,32 +56,25 @@
 	  <Item value="0" label="ON when motion is tripped, OFF when motion stops"/>
 	  <Item value="1" label="OFF when motion is tripped, ON when motion stops"/>
     </Value>
-	<!-- Parameter 100 removed. Not present on current firmware
-    <Value genre="config" type="byte" size="1" index="100" label="Change Parameters 101-104 back to default settings" min="1" max="1" value="1">
-      <Help>
-      Change Parameters 101-104 back to default settings
-      </Help>
-    </Value>
-	-->
-    <Value genre="config" type="int" size="1" index="101" label="Temperature Sensor Read Interval" min="0" max="2768400" value="7200">
+    <Value genre="config" type="int" size="4" index="101" label="Temperature Sensor Read Interval" min="0" max="2768400" value="7200">
       <Help>
       The interval in which the temperature sensor is checked, in seconds. Set to 0 to disable (Note: will be rounded to the nearest minute)
       Default: 7200 (2 hours)
       </Help>
     </Value>
-    <Value genre="config" type="int" size="1" index="102" label="Humidity Sensor Read Interval" min="0" max="2768400" value="7200">
+    <Value genre="config" type="int" size="4" index="102" label="Humidity Sensor Read Interval" min="0" max="2768400" value="7200">
       <Help>
       The interval in which the humidity sensor is checked, in seconds. Set to 0 to disable (Note: will be rounded to the nearest minute)
       Default: 7200 (2 hours)
       </Help>
     </Value>	
-    <Value genre="config" type="int" size="1" index="103" label="Luminance Sensor Read Interval" min="0" max="2768400" value="7200">
+    <Value genre="config" type="int" size="4" index="103" label="Luminance Sensor Read Interval" min="0" max="2768400" value="7200">
       <Help>
       The interval in which the luminance sensor is checked, in seconds. Set to 0 to disable (Note: will be rounded to the nearest minute)
       Default: 7200 (2 hours)
       </Help>
     </Value>	
-    <Value genre="config" type="int" size="1" index="104" label="Battery Level Read Interval" min="0" max="2768400" value="86400">
+    <Value genre="config" type="int" size="4" index="104" label="Battery Level Read Interval" min="0" max="2768400" value="86400">
       <Help>
       The interval in which the battery level is checked, in seconds. Set to 0 to disable (Note: will be rounded to the nearest minute)
       Default: 86400 (24 hours)
@@ -92,13 +84,13 @@
       <Help>
       Sensor reports are only checked at the interval defined in parameters 101-104.  Should the sensor data always be reported, or only if the value has changed more than the threshold configured in parameters 111-114?
 	  Always: Send sensor data every interval, even if the value did not change.
-	  Threshold: Send sensor data on interval, but only if the value has changed by more than the defined threshold.
+	  Threshold: Send sensor data on interval, but only if the value has changed by more than the defined threshold since the last report was sent.
 	  Default: Always
       </Help>
 	  <Item value="0" label="Always"/>
 	  <Item value="1" label="Threshold" />
     </Value>
-    <Value genre="config" type="short" size="1" index="111" label="Temperature Threshold" min="1" max="500" value="10">
+    <Value genre="config" type="short" size="2" index="111" label="Temperature Threshold" min="1" max="500" value="10">
       <Help>
       Set the temperature threshold of the sensor.  If Sensor Report Method = "Always", the temperature change must exceed this value in order to be reported to the hub.
 	  Range: 1-500
@@ -113,14 +105,14 @@
       Default: 5%
       </Help>
     </Value>	
-    <Value genre="config" type="short" size="1" index="113" label="Luminance Threshold" min="1" max="65528" value="150">
+    <Value genre="config" type="short" size="2" index="113" label="Luminance Threshold" min="1" max="65528" value="150">
       <Help>
       Set the luminance threshold of the sensor (in lux).  If Sensor Report Method = "Always", the luminance change must exceed this value in order to be reported to the hub.
 	  Range: 1-65528
       Default: 150
       </Help>
     </Value>		
-    <Value genre="config" type="short" size="1" index="114" label="Battery Threshold" min="1" max="100" value="10">
+    <Value genre="config" type="byte" size="1" index="114" label="Battery Threshold" min="1" max="100" value="10">
       <Help>
       Set the battery threshold of the sensor (percent).  If Sensor Report Method = "Always", the battery level change must exceed this value in order to be reported to the hub.
 	  Range: 1-100
