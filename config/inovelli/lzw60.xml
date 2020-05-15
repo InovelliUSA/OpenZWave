@@ -100,7 +100,7 @@
     </Value>
     <Value genre="config" type="short" size="1" index="111" label="Temperature Threshold" min="1" max="500" value="10">
       <Help>
-      Set the temperature threshold of the sensor.  If Sensor Report Method = "Always", the temperature change must exceed this value in order to be reported to the hub.
+      Set the temperature threshold of the sensor.  If Sensor Report Method = "Threshold", the temperature change must exceed this value in order to be reported to the hub.
 	  Range: 1-500
 	  1 = 0.1 degrees Celcius, 500 = 50 degrees Celcuis
       Default: 10 (1 degree Celcuis)
@@ -108,21 +108,21 @@
     </Value>	
     <Value genre="config" type="byte" size="1" index="112" label="Humidity Threshold" min="1" max="32" value="5">
       <Help>
-      Set the humidity threshold of the sensor.  If Sensor Report Method = "Always", the humidity change must exceed this value in order to be reported to the hub.
+      Set the humidity threshold of the sensor.  If Sensor Report Method = "Threshold", the humidity change must exceed this value in order to be reported to the hub.
 	  Range: 1-32, 1 = 1%, 32 = 32%
       Default: 5%
       </Help>
     </Value>	
     <Value genre="config" type="short" size="1" index="113" label="Luminance Threshold" min="1" max="65528" value="150">
       <Help>
-      Set the luminance threshold of the sensor (in lux).  If Sensor Report Method = "Always", the luminance change must exceed this value in order to be reported to the hub.
+      Set the luminance threshold of the sensor (in lux).  If Sensor Report Method = "Threshold", the luminance change must exceed this value in order to be reported to the hub.
 	  Range: 1-65528
       Default: 150
       </Help>
     </Value>		
     <Value genre="config" type="short" size="1" index="114" label="Battery Threshold" min="1" max="100" value="10">
       <Help>
-      Set the battery threshold of the sensor (percent).  If Sensor Report Method = "Always", the battery level change must exceed this value in order to be reported to the hub.
+      Set the battery threshold of the sensor (percent).  If Sensor Report Method = "Threshold", the battery level change must exceed this value in order to be reported to the hub.
 	  Range: 1-100
       Default: 10
       </Help>
