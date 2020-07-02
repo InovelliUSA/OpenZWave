@@ -305,6 +305,15 @@ Please Note: If this doesn't work, you can check to see if your switch is within
       </Help>
     </Value>
 
+    <Value genre="config" type="byte" size="1" index="31" label="Local Protection" min="0" max="3" value="0">
+      <Help>
+      Enable local protection on these buttons. 0 = none, 1 = light, 2 = fan, 3 = both.
+      </Help>
+      <Item value="0" label="None"/>
+      <Item value="1" label="Light Button"/>
+      <Item value="2" label="Fan Button"/>
+      <Item value="3" label="Both Buttons"/>
+    </Value>
   </CommandClass>
 
   <!-- Central Scene Reports -->
