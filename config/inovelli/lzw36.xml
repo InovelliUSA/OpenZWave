@@ -173,7 +173,7 @@ Please Note: If this doesn't work, you can check to see if your switch is within
 
     <Value genre="config" type="short" size="2" index="18" label="Light LED Indicator Color" min="0" max="255" value="170">
       <Help>
-      This is the color of the Light LED strip represented as part of the HUE color wheel. Since the wheel has 360 values and this parameter only has 255, the following equation can be used to determine the color: value/255 * 350 = Hue color wheel value
+      This is the color of the Light LED strip represented as part of the HUE color wheel. Since the wheel has 360 values and this parameter only has 255, the following equation can be used to determine the color: value/255 * 360 = Hue color wheel value
       Range: 0 to 255
       Default: 170
       </Help>
@@ -189,7 +189,7 @@ Please Note: If this doesn't work, you can check to see if your switch is within
 
     <Value genre="config" type="short" size="2" index="20" label="Fan LED Indicator Color" min="0" max="255" value="170">
       <Help>
-      This is the color of the Fan LED strip represented as part of the HUE color wheel. Since the wheel has 360 values and this parameter only has 255, the following equation can be used to determine the color: value/255 * 350 = Hue color wheel value
+      This is the color of the Fan LED strip represented as part of the HUE color wheel. Since the wheel has 360 values and this parameter only has 255, the following equation can be used to determine the color: value/255 * 360 = Hue color wheel value
       Range: 0 to 255
       Default: 170
       </Help>
@@ -225,7 +225,7 @@ Please Note: If this doesn't work, you can check to see if your switch is within
           Byte 4: Effect - 0 = Off, 1 = Solid, 2 = Slow Blink, 3 = Fast Blink, 4 = Chase, 5 = Pulse
           Byte 3: Duration - 1 to 60 = seconds, 61 to 120  minutes, 121 -  254 = hours, 255 = Indefinitely
           Byte 2: Intensity - 0 to 9.  0 = dim, 9 = bright
-          Byte 1: Color - 0 - 255. Hue color wheel. value/255 * 350 = Hue color wheel value
+          Byte 1: Color - 0 - 255. Hue color wheel. value/255 * 360 = Hue color wheel value
       Range: 0-100600319
       Default: 0
       </Help>
@@ -237,7 +237,7 @@ Please Note: If this doesn't work, you can check to see if your switch is within
           Byte 4: Effect - 0 = Off, 1 = Solid, 2 = Slow Blink, 3 = Fast Blink, 4 = Chase, 5 = Pulse
           Byte 3: Duration - 1 to 60 = seconds, 61 to 120  minutes, 121 -  254 = hours, 255 = Indefinitely
           Byte 2: Intensity - 0 to 9.  0 = dim, 9 = bright
-          Byte 1: Color - 0 - 255. Hue color wheel. value/255 * 350 = Hue color wheel value
+          Byte 1: Color - 0 - 255. Hue color wheel. value/255 * 360 = Hue color wheel value
       Range: 0-100600319
       Default: 0
       </Help>
