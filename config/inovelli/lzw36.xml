@@ -22,13 +22,13 @@ Please Note: If this doesn't work, you can check to see if your switch is within
     </ChangeLog>
   </MetaData>
 
-  <!-- This shows the device names, but removes some other fields (increment/decrement, target level, etc)
+  <!-- This shows the device names, but removes some other fields (increment/decrement, target level, etc)  -->
   <CommandClass id="38">
     <Instance index="1" label="Fan/Light" />
     <Instance index="2" endpoint="1" label="Light" />
     <Instance index="3" endpoint="2" label="Fan" />
   </CommandClass>
-  -->
+ 
 
   <!-- Configuration Parameters -->
   <CommandClass id="112">
