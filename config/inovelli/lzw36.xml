@@ -341,4 +341,11 @@ Please Note: If this doesn't work, you can check to see if your switch is within
       <Group index="7" label="Switch_MultiLevel_Start/Stop_Fan" max_associations="5" />
     </Associations>
   </CommandClass>
+
+  <!-- Multi Instance -->
+  <CommandClass id="96" mapping="endpoints" />
+
+  <!-- Multi Channel -->
+  <CommandClass id="142" ForceInstances="true" />
+
 </Product>
