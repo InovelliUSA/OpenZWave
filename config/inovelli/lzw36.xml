@@ -24,6 +24,13 @@ Please Note: If this doesn't work, you can check to see if your switch is within
       <Entry author="Eric Maycock - ericm@inovelli.com" date="27 Aug 2020" revision="9">Adding parameter 51 for firmware 1.36+</Entry>
     </ChangeLog>
   </MetaData>
+
+  <!-- This shows the device names, but removes some other fields (increment/decrement, target level, etc)  -->
+  <CommandClass id="38">
+    <Instance index="1" label="Fan/Light" />
+    <Instance index="2" endpoint="1" label="Light" />
+    <Instance index="3" endpoint="2" label="Fan" />
+  </CommandClass>
  
   <!-- Configuration Parameters -->
   <CommandClass id="112">
@@ -319,6 +326,18 @@ Please Note: If this doesn't work, you can check to see if your switch is within
     </Value>
   </CommandClass>
 
+  <!-- Central Scene Reports -->
+  <CommandClass id="91">
+    <Instance index="1" />
+      <Value type="int" genre="system" instance="1" index="0" label="Scene Count" units="" read_only="true" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="2" />
+      <Value type="int" genre="user" instance="1" index="3" label="Light Dim Up" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
+      <Value type="int" genre="user" instance="1" index="4" label="Light Dim Down" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
+      <Value type="int" genre="user" instance="1" index="2" label="Light Button" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
+      <Value type="int" genre="user" instance="1" index="5" label="Fan Dim Up" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
+      <Value type="int" genre="user" instance="1" index="6" label="Fan Dim Down" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
+      <Value type="int" genre="user" instance="1" index="1" label="Fan Button" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
+  </CommandClass>
+
   <!-- Association Groups -->
   <CommandClass id="133">
     <Associations num_groups="7">
@@ -331,4 +350,11 @@ Please Note: If this doesn't work, you can check to see if your switch is within
       <Group index="7" label="Switch_MultiLevel_Start/Stop_Fan" max_associations="5" />
     </Associations>
   </CommandClass>
+
+  <!-- Multi Instance -->
+  <CommandClass id="96" mapping="endpoints" />
+
+  <!-- Multi Channel -->
+  <CommandClass id="142" ForceInstances="true" />
+ 
 </Product>

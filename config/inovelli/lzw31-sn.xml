@@ -242,6 +242,14 @@ sed, held, released, Down pressed, held, released &amp; config button pressed.
     </Value>
   </CommandClass>
 
+    <CommandClass id="91">
+    <Instance index="1" />
+      <Value type="int" genre="system" instance="1" index="0" label="Scene Count" units="" read_only="true" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="2" />
+      <Value type="int" genre="user" instance="1" index="2" label="Top Button Scene" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
+      <Value type="int" genre="user" instance="1" index="1" label="Bottom Button Scene" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
+      <Value type="int" genre="user" instance="1" index="3" label="Config Button Scene" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
+  </CommandClass>
+
   <!-- Association Groups -->
   <CommandClass id="133">
     <Associations num_groups="4">
