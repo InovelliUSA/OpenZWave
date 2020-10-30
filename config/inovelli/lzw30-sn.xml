@@ -1,4 +1,4 @@
-<Product Revision="6" xmlns="https://github.com/OpenZWave/open-zwave">
+<Product Revision="10" xmlns="https://github.com/OpenZWave/open-zwave">
   <MetaData>
     <MetaDataItem name="OzwInfoPage">http://www.openzwave.com/device-database/031E:0001:0002</MetaDataItem>
     <MetaDataItem name="ProductPic">images/inovelli/lzw30-sn.png</MetaDataItem>
@@ -22,6 +22,10 @@ Only use either of these procedures in the event that the network primary contro
 Please Note: If this doesn't work, you can check to see if your switch is within Z-Wave Range by holding down the Configuration Button for 5-10 seconds (if it's not within range, the LED Bar will indicate Red and if it is within Range, the LED Bar will indicate Green). If your switch indicates Red, please move the switch closer to the HUB. If your switch indicates Green, please try running an Exclusion to reset your switch.</MetaDataItem>
     <ChangeLog>
       <Entry author="Eric Maycock - ericm@inovelli.com" date="10 Sep 2019" revision="6">Adding Metadata</Entry>
+      <Entry author="Justin Hammond" date="13 Mar 2020" revision="7">Remove Static Central Scene Entries - Issue #2155</Entry>
+      <Entry author="Brett Daugherty and SirDeadlyStrike" date="23 Jul 2020" revision="8">Add Instant On/Off Parameter</Entry>
+      <Entry author="Eric Maycock - ericm@inovelli.com" date="24 Jul 2020" revision="9">Clarifying which scenes are disabled with parameter 51</Entry>
+      <Entry author="Eric Maycock - ericm@inovelli.com" date="30 Oct 2020" revision="10">Adding parameter 13 to manually specify the load if auto detection doesn't work</Entry>
     </ChangeLog>
   </MetaData>
   <!-- Configuration Parameters -->
@@ -108,9 +112,16 @@ Please Note: If this doesn't work, you can check to see if your switch is within
       Default: 10
       </Help>
     </Value>
+    <Value genre="config" type="list" size="1" index="13" label="Load Type" min="0" max="1" value="0">
+       <Help>
+       The default of the switch is to auto detect the load. In some situations you may want to try the option for a special load type. (firmware 1.17+)
+       </Help>
+       <Item value="0" label="Default"/>
+       <Item value="1" label="Special Load"/>
+    </Value>
     <Value genre="config" type="list" size="1" index="51" label="Instant On" min="0" max="1" value="1">
        <Help>
-          Enables instant on (ie: disables the 700ms button delay). Note, if you disable the delay, it will also disable scene control except for Button 1 (ie: tap up 1x or tap down 1x) and button 7 (config button). All other buttons (2-6) will be disabled.
+       Enables instant on (ie: disables the 700ms button delay). Note, if you disable the delay, it will also disable scene control except for the following: Up pressed, held, released, Down pressed, held, released &amp; config button pressed.
        </Help>
        <Item value="0" label="Enabled (no delay)"/>
        <Item value="1" label="Disabled (700ms delay)"/>
@@ -123,14 +134,6 @@ Please Note: If this doesn't work, you can check to see if your switch is within
       <Group index="1" label="Lifeline" max_associations="5" />
       <Group index="2" label="Basic_Set" max_associations="5" />
     </Associations>
-  </CommandClass>
-  <!-- Central Scene Reports -->
-  <CommandClass id="91">
-    <Instance index="1" />
-      <Value type="int" genre="system" instance="1" index="0" label="Scene Count" units="" read_only="true" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="2" />
-      <Value type="int" genre="user" instance="1" index="2" label="Top Button Scene" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
-      <Value type="int" genre="user" instance="1" index="1" label="Bottom Button Scene" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
-      <Value type="int" genre="user" instance="1" index="3" label="Config Button Scene" units="" read_only="false" write_only="false" verify_changes="false" min="-2147483648" max="2147483647" value="0" />
   </CommandClass>
 </Product>
 
